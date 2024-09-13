@@ -2,6 +2,11 @@ version: "3.4"
 
 services:
   api:
+    deploy:
+     resources:
+      limits:
+       cpus: "0.5"
+       memory: 512M
     image: ghcr.io/saleor/saleor:3.20
     ports:
       - 8000:8000
